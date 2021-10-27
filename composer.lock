@@ -55,10 +55,6 @@
                 "orm",
                 "thinkphp"
             ],
-            "support": {
-                "issues": "https://github.com/top-think/framework/issues",
-                "source": "https://github.com/top-think/framework/tree/v5.1.41"
-            },
             "time": "2021-01-11T02:51:29+00:00"
         },
         {
@@ -100,10 +96,6 @@
                     "email": "448901948@qq.com"
                 }
             ],
-            "support": {
-                "issues": "https://github.com/top-think/think-installer/issues",
-                "source": "https://github.com/top-think/think-installer/tree/v2.0.5"
-            },
             "time": "2021-01-14T12:12:14+00:00"
         }
     ],
@@ -117,5 +109,5 @@
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "1.1.0"
 }
