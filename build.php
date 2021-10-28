@@ -13,14 +13,17 @@ return [
     // 生成应用公共文件
     '__file__' => ['common.php'],
 
-    // 定义demo模块的自动生成 （按照实际定义的文件名生成）
-    'demo'     => [
+    // 生成admin模块
+    'admin'     => [
+        // 生成admin模块的公共函数文件
         '__file__'   => ['common.php'],
-        '__dir__'    => ['behavior', 'controller', 'model', 'view'],
-        'controller' => ['Index', 'Test', 'UserType'],
-        'model'      => ['User', 'UserType'],
+        // 在 admin 模块创建 controller model view 目录
+        '__dir__'    => ['controller', 'model', 'view'],
+        // 在 controller中创建index控制器
+        'controller' => ['Index'],
+        // 在model中创建User模型类
+        'model'      => ['User'],
+        // 在view中创建index/index.html视图文件
         'view'       => ['index/index'],
     ],
-
-    // 其他更多的模块定义
 ];
