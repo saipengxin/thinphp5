@@ -1,12 +1,16 @@
 <?php
 
 namespace app\admin\controller;
+
+use think\facade\Config;
 use think\Controller;
 
 class User extends Controller {
 
-    public function _empty()
+    public function index()
     {
-        echo '方法不存在';
+        config('dbhost','localhost');
+        dump(config('dbhost'));
     }
+
 }
