@@ -41,5 +41,5 @@ Route::group('api/:version/goods',function () {
 //    Route::get('/:id','api/v1.Goods/index');
 
     // 正确的写法
-    Route::get('/:id','api/:version.Goods/index');
+    Route::any('/:id/:name','api/:version.Goods/index');
 });
