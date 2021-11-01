@@ -1,20 +1,17 @@
 <?php
 
 namespace app\admin\controller;
-
-use think\facade\Config;
 use think\Controller;
+use think\facade\Cookie;
 
 class User extends Controller {
-
     public function index()
     {
-        echo 'hello world';
-    }
+        session("user","赛鹏新");
+        Cookie::set('age',30);
+        
+        define('ROOT','localhost/tp5/public');
 
-    public function getName()
-    {
-        echo 'getName';
+        return $this->fetch();
     }
-
 }
