@@ -9,8 +9,12 @@ class User extends Controller {
 
     public function index()
     {
-        config('dbhost','localhost');
-        dump(config('dbhost'));
+        echo 'hello world';
+    }
+
+    public function getName()
+    {
+        echo 'getName';
     }
 
 }
