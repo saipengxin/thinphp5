@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><{block name="title"}>首页<{/block}></title>
+</head>
+<body>
+    <div id="main">
+        <{block name="head"}>
+            <div id="head">
+                网站头部
+            </div>
+        <{/block}>
+        <div id="content">
+            <{block name="nav"}>
+                <div id="nav">
+                    <ul>
+                        <li>列表1</li>
+                        <li>列表2</li>
+                        <li>列表3</li>
+                    </ul>
+                </div>
+            <{/block}>
+            <{block name="content"}><{/block}>
+        </div>
+        <{block name="foot"}>
+            <div id="foot">
+                网站尾部
+            </div>
+        <{/block}>
+    </div>
+</body>
+</html>
