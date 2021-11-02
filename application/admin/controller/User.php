@@ -6,7 +6,9 @@ use think\Controller;
 class User extends Controller {
     public function index()
     {
-        $this->assign('number',10);
+        $this->assign('age','');
+        $this->assign('id',5);
+        define('APP_PATH','./public/index.php');
         return $this->fetch();
     }
 }
