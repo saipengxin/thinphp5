@@ -2,19 +2,16 @@
 
 namespace app\admin\controller;
 use think\Controller;
-use think\Db;
+use app\admin\model\User as UserModel;
 
 class User extends Controller {
     public function index()
     {
-        $data = [];
-        for ($i=1; $i < 10; $i++) {
-            $data[] = [
-                'username'  =>  'user'.$i,
-                'password'  =>  md5('admin123'.$i),
-            ];
-        }
-        $res = Db::table('user')->insertAll($data);
-        dump($res);
+        $data = [
+            'username'  =>  '没有加密',
+            'password'  =>  '123456',
+        ];
+        $user = new UserModel();
+        $user->save($data);
     }
 }

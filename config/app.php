@@ -143,4 +143,7 @@ return [
     // 异常处理handle类 留空使用 \think\exception\Handle
     'exception_handle'       => '',
 
+    // 图片路径
+    'img_url'   =>  'localhost/tp5/public/static/img/'
+
 ];
