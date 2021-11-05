@@ -1,17 +1,19 @@
 <?php
 
 namespace app\admin\controller;
+use app\admin\model\Article;
 use think\Controller;
-use app\admin\model\User as UserModel;
-
 class User extends Controller {
     public function index()
     {
+        // 给1号文章写入多条评论
+        // 先查询到1号文章
+        $article = Article::get(1);
+        // 给1号文章写入评论
         $data = [
-            'username'  =>  '没有加密',
-            'password'  =>  '123456',
+            ['comment'=>'1号评论'],
+            ['comment'=>'2号评论'],
         ];
-        $user = new UserModel();
-        $user->save($data);
+        $res = $article->comm()->saveAll($data);
     }
 }

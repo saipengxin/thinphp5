@@ -5,13 +5,12 @@ use think\Model;
 
 class User extends Model
 {
-    protected function getImgAttr($value) {
-        return config('img_url') . $value;
-    }
-
-
-    protected function setPasswordAttr($value)
+    // 定义user表和profile表之间的关联关系
+    public function profile()
     {
-        return md5($value);
+        // 参数1：关联模型名
+        // 参数2：外键字段
+        // 参数3、本表的主键
+        return $this->hasOne('Profile','uid','id');
     }
 }
