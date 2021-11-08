@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <{foreach $list as $v}>
+            <tr>
+                <td><{$v.shop_price}></td>
+            </tr>
+        <{/foreach}>
+    </table>
+    <{$list|raw}>
+</body>
+</html>
