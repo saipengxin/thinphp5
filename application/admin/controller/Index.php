@@ -1,19 +1,29 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-use think\Db;
 
 class Index extends Controller
 {
     public function page()
     {
-        // 创建分页导航
-        $list = Db::table('tn_goods')
-            ->field('goods_name,shop_price')
-            ->paginate(5); // 每页显示5条数据
-
-        $this->assign('list',$list);
         return $this->fetch();
+    }
+
+    public function upload()
+    {
+        // 接收
+        $file = request()->file('image');
+        // 上传
+        $finfo = $file->move('uploads');
+
+        dump($finfo->getSaveName());
+        dump($finfo->getFilename());
+    }
+
+    public function thumb()
+    {
+        $image = \think\Image::open('./test.jpg');
+        $image -> thumb(150,150)->save('thumb.png');
     }
 
 }
